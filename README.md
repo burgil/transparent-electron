@@ -23,9 +23,11 @@ Simply toggle the newly added `draggable` option to the settings to switch betwe
 
 Burgil, for investing so much time into this simple thing
 
-# View the overlays:
+# View the overlays that prevents dragging corners:
 
-Change:
+![Overlays that prevents dragging corners](image-1.png)
+
+Change: (Also it might be wise to set `transparent` to `false` in `app.js` while testing)
 
 ```css
         .draggable-image .no-drag {
