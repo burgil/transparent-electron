@@ -1,3 +1,5 @@
+# The logos are not under MIT license and should not be used in your projects, please
+
 # A transparent draggable or click through electron app
 
 ![Example](image.png)
