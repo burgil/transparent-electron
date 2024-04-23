@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            user-select: none;
+            box-sizing: border-box;
+        }
+        body {
+            margin: 0;
+        }
+        .draggable-image {
+            position: relative;
+        }
+        .draggable-image img {
+            display: block;
+            width: 100%;
+            -webkit-app-region: drag;
+            border-radius: 50%;
+        }
+        .draggable-image .no-drag {
+            -webkit-app-region: no-drag;
+            position: absolute;
+            width: 7.5px;
+            height: 7.5px;
+            background: transparent;
+        }
+        .draggable-image .no-drag::after {
+            content: '';
+            -webkit-app-region: no-drag;
+            position: absolute;
+            width: 5.625px;
+            height: 5.625px;
+            background: transparent;
+        }
+        .draggable-image .no-drag::before {
+            content: '';
+            -webkit-app-region: no-drag;
+            position: absolute;
+            background: transparent;
+        }
+        .v, .v::after, .v::before {
+            height: 5.625px;
+            width: 4.21875px;
+        }
+        .h, .h::after, .h::before {
+            width: 5.625px;
+            height: 4.21875px;
+        }
+        .t, .t::after, .t::before, .t2 {
+            top: 0;
+        }
+        .r, .r2, .r2::after, .r2::before {
+            right: 0;
+        }
+        .l, .l2, .l2::after, .l2::before {
+            left: 0;
+        }
+        .b, .b::before, .b2, .b::after {
+            bottom: 0;
+        }
+        .r::after {
+            right: 7.5px;
+        }
+        .l::after {
+            left: 7.5px;
+        }
+        .r::before {
+            right: 13.125px;
+        }
+        .l::before {
+            left: 13.125px;
+        }
+        .t2::after {
+            top: 7.5px;
+        }
+        .b2::after {
+            bottom: 7.5px;
+        }
+        .t2::before {
+            top: 13.125px;
+        }
+        .b2::before {
+            bottom: 13.125px;
+        }
+    </style>
+</head>
+<body>
+    <div class="draggable-image">
+        <img src="EVA.png">
+        <div class="no-drag h t r"></div>
+        <div class="no-drag h t l"></div>
+        <div class="no-drag h b r"></div>
+        <div class="no-drag h b l"></div>
+        <div class="no-drag v t2 r2"></div>
+        <div class="no-drag v t2 l2"></div>
+        <div class="no-drag v b2 r2"></div>
+        <div class="no-drag v b2 l2"></div>
+    </div>
+    <div class="draggable-image">
+        <img src="ROB.png">
+        <div class="no-drag h t r"></div>
+        <div class="no-drag h t l"></div>
+        <div class="no-drag h b r"></div>
+        <div class="no-drag h b l"></div>
+        <div class="no-drag v t2 r2"></div>
+        <div class="no-drag v t2 l2"></div>
+        <div class="no-drag v b2 r2"></div>
+        <div class="no-drag v b2 l2"></div>
+    </div>
+</body>
+</html>
